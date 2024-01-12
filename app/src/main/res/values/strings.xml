@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SoundaryalahariApp</string>
+    <string name="Back">Back</string>
+    <string name="soundaryalahari">Soundaryalahari</string>
+    <string name="shloka_entry"> Shloka Entry</string>
+    <string name="no_shlokas_yet">No shlokas yet! Tap + to add</string>
+    <string name="add_shloka">Add Shloka and all details</string>
+    <string name="shloka_details">Shloka Details</string>
+    <string name="edit_shloka">Edit Shloka</string>
+</resources>
