@@ -15,7 +15,6 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.soundaryalahariappversion2.ui.navigation.SoundaryalahariNavHost
-import com.example.soundaryalahariappversion2.ui.navigation.SoundaryalahariNavHost
 
 @Composable
 fun SoundaryalahariApp(navController: NavHostController = rememberNavController()) {

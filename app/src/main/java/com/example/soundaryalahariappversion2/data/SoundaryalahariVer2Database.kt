@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Shloka::class],version = 1, exportSchema = false)
+@Database(entities = [Shloka::class],version = 5)
 abstract class SoundaryalahariDatabase :RoomDatabase() {
     abstract fun shlokaDao():ShlokaDao
     companion object {
@@ -16,6 +16,7 @@ abstract class SoundaryalahariDatabase :RoomDatabase() {
         fun getDatabase(context: Context): SoundaryalahariDatabase {
 //                return Instance ?: synchronized(this){
 //                    Room.databaseBuilder(context = context ,SoundaryalahariDatabase::class.java,"shloka_database")
+//                        .createFromAsset("database/shloka_database.db") // I saved this from device file explorer
 //                        .fallbackToDestructiveMigration()
 //                        .build()
 //                        .also { Instance = it }
@@ -23,6 +24,7 @@ abstract class SoundaryalahariDatabase :RoomDatabase() {
             val db = Instance ?: synchronized(this){
                 Room.databaseBuilder(context = context ,SoundaryalahariDatabase::class.java,"shloka_database")
                     .createFromAsset("database/shloka_database.db") // I saved this from device file explorer
+
                     .fallbackToDestructiveMigration()
                     .build()
                     .also { Instance = it }
