@@ -4,7 +4,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.example.soundaryalahariappversion2.R
 import com.example.soundaryalahariappversion2.data.Shloka
 import com.example.soundaryalahariappversion2.data.ShlokaRepository
 

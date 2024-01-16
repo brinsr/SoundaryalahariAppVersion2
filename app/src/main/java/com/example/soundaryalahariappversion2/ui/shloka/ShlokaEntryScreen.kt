@@ -3,30 +3,23 @@ package com.example.soundaryalahariappversion2.ui.shloka
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
@@ -62,7 +55,6 @@ object ShlokaEntryDestination: NavigationDestination {
     override val route = "shloka_entry"
     override val titleRes = R.string.add_shloka //"Add Shloka"
 }
-private val TAG ="ShlokaEntryScreen"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -156,7 +148,7 @@ fun ShlokaInputForm(
                 fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold
             ),
-            colors = TextFieldDefaults.outlinedTextFieldColors(
+            colors = OutlinedTextFieldDefaults.colors(
                 focusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 unfocusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 disabledSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
@@ -178,7 +170,7 @@ fun ShlokaInputForm(
             value = shloka.chant,
             onValueChange = { onContentChange(shloka.copy(chant = it)) },
             label = { Text("Chant resource") },
-            colors = TextFieldDefaults.outlinedTextFieldColors(
+            colors = OutlinedTextFieldDefaults.colors(
                 focusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 unfocusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 disabledSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
@@ -194,7 +186,7 @@ fun ShlokaInputForm(
                 onContentChange(shloka.copy(sing = it))
             },
             label = { Text("Sing Resource Text") },
-            colors = TextFieldDefaults.outlinedTextFieldColors(
+            colors = OutlinedTextFieldDefaults.colors(
                 focusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 unfocusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 disabledSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,

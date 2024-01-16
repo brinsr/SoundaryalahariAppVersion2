@@ -8,7 +8,7 @@ interface AppContainer {
     val shlokaRepository:ShlokaRepository
 }
 
-class AppDataContainer(private val context: Context, ): AppContainer {
+class AppDataContainer(private val context: Context ): AppContainer {
     //Implementation for [ShlokaRepository
     override val shlokaRepository: ShlokaRepository by lazy {
         OfflineShlokaRepository(SoundaryalahariDatabase.getDatabase(context).shlokaDao())

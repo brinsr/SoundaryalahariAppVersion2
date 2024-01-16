@@ -6,16 +6,11 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.soundaryalahariappversion2.R
 import com.example.soundaryalahariappversion2.data.Shloka
 import com.example.soundaryalahariappversion2.data.ShlokaRepository
 import com.example.soundaryalahariappversion2.ui.shloka.ShlokaEntryViewModel.ShlokaUiState
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class ShlokaEditViewModel (

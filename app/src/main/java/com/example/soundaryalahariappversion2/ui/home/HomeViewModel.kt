@@ -7,13 +7,9 @@ import com.example.soundaryalahariappversion2.data.Shloka
 import com.example.soundaryalahariappversion2.data.ShlokaRepository
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.emptyFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
+
 
 /**
  * ViewModel to retrieve all items in the Room database

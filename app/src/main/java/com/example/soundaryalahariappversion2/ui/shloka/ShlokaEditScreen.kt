@@ -10,6 +10,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
@@ -25,7 +26,6 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.core.content.res.TypedArrayUtils.getResourceId
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.soundaryalahariappversion2.R
 import com.example.soundaryalahariappversion2.SoundaryalahariTopAppBar
@@ -78,8 +78,6 @@ fun ShlokaEditScreen(
         )
     }
 }
-
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShlokaEditBody(
     shlokaEditUiState: ShlokaEntryViewModel.ShlokaUiState, //we need the same info
@@ -97,7 +95,7 @@ fun ShlokaEditBody(
             value = shlokaEditUiState.shloka.content,
             onValueChange = { onShlokaContentChange(shlokaEditUiState.shloka.copy(content = it)) },
             label = { Text("Content") },
-            colors = TextFieldDefaults.outlinedTextFieldColors(
+            colors = OutlinedTextFieldDefaults.colors(
                 focusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 unfocusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 disabledSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
@@ -110,7 +108,7 @@ fun ShlokaEditBody(
             value = shlokaEditUiState.shloka.meaning,
             onValueChange = { onShlokaContentChange(shlokaEditUiState.shloka.copy(meaning = it)) },
             label = { Text("Meaning") },
-            colors = TextFieldDefaults.outlinedTextFieldColors(
+            colors = OutlinedTextFieldDefaults.colors(
                 focusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 unfocusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 disabledSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
@@ -123,7 +121,7 @@ fun ShlokaEditBody(
             value = shlokaEditUiState.shloka.chant,
             onValueChange = { onShlokaContentChange(shlokaEditUiState.shloka.copy(chant = it)) },
             label = { Text("Chant resource") },
-            colors = TextFieldDefaults.outlinedTextFieldColors(
+            colors = OutlinedTextFieldDefaults.colors(
                 focusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 unfocusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 disabledSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
@@ -140,7 +138,7 @@ fun ShlokaEditBody(
 
             },
             label = { Text("Sing Resource Text") },
-            colors = TextFieldDefaults.outlinedTextFieldColors(
+            colors = OutlinedTextFieldDefaults.colors(
                 focusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 unfocusedSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
                 disabledSupportingTextColor = MaterialTheme.colorScheme.secondaryContainer,
@@ -163,6 +161,6 @@ fun ShlokaEditBody(
 @Composable
 fun ShlokaEditBodyPreview(){
     SoundaryalahariAppVersion2Theme {
-        ShlokaEditBody( ShlokaEntryViewModel.ShlokaUiState(Shloka(0,0,"","","","")), onShlokaContentChange = {}, onSaveClick = {},)
+        ShlokaEditBody( ShlokaEntryViewModel.ShlokaUiState(Shloka(0,0,"","","","")), onShlokaContentChange = {}, onSaveClick = {})
     }
 }

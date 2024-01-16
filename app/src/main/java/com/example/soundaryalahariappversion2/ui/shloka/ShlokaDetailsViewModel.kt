@@ -3,7 +3,6 @@ package com.example.soundaryalahariappversion2.ui.shloka
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.soundaryalahariappversion2.R
 import com.example.soundaryalahariappversion2.data.Shloka
 import com.example.soundaryalahariappversion2.data.ShlokaRepository
 import kotlinx.coroutines.flow.SharingStarted

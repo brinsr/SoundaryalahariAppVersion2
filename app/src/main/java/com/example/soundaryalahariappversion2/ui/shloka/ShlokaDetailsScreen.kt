@@ -275,10 +275,6 @@ private fun ShlokaAudio(
                                 mediaPlayer.pause()
                                 currentPlaybackPosition = mediaPlayer.currentPosition
                             } else {
-                                Log.e(
-                                    "ShlokaDetailsScreen",
-                                    "RESUMING and curr pos is ${currentPlaybackPosition} and duration is ${mediaPlayer.duration}"
-                                )
                                 if (mediaPlayer.isPlaying) {
                                     mediaPlayer.seekTo((currentPlaybackPosition))
                                 }
