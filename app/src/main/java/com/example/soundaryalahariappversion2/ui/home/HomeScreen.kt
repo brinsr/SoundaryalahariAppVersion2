@@ -106,7 +106,9 @@ fun HomeScreen(
                     },
                     onSearch = {
                         active = false
-                        navigateToShlokaDetails(it.toInt())
+                        if(it.toIntOrNull() in (1..100)) {//only if number, go to details
+                            navigateToShlokaDetails(it.toInt())
+                        }
                     },
                     active = true,
                     shape = MaterialTheme.shapes.medium,
