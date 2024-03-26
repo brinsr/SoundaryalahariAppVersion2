@@ -224,10 +224,11 @@ private fun ShlokaAudio(
 ) {
     var mediaPlayer by remember { mutableStateOf(MediaPlayer()) }
 
-    val audioResStrng = "shloka" + shloka.number + title.lowercase()
+    val audioResStrng = "cshloka" + shloka.number + title.lowercase()
     //The following is discouraged because app crashes if resource not found
     val audioResId =
         LocalContext.current.resources.getIdentifier(audioResStrng, "raw", context.packageName)
+        //R.raw.shloka9chantxconvert
 
     var isPlaying by remember { mutableStateOf(false) }
     var currentPlaybackPosition by remember { mutableStateOf(0)}
